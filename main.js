@@ -2,6 +2,7 @@ const inputTxt = document.querySelector("#txtFieldInput");
 const addTaskBtn = document.querySelector("#addTaskBtn");
 const list = document.querySelector(".todo-list");
 const errorMsg = document.querySelector("#no-input");
+const taskArray = [];
 
 addTaskBtn.addEventListener(
     "click",
@@ -11,6 +12,7 @@ addTaskBtn.addEventListener(
         const text = inputTxt.value;
         if(text != ""){
 
+            taskArray.push(text);
             errorMsg.innerHTML = "";
             const task = document.createElement('li');
             const taskLabel = document.createElement('span');
