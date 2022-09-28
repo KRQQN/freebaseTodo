@@ -3,6 +3,8 @@ const addTaskBtn = document.querySelector("#addTaskBtn");
 const list = document.querySelector(".todo-list");
 const errorMsg = document.querySelector("#no-input");
 const taskArray = [];
+const count = document.querySelector("#counter");
+let countValue = 0;
 
 addTaskBtn.addEventListener(
     "click",
@@ -27,10 +29,13 @@ addTaskBtn.addEventListener(
             function(){
                 if(task.getAttribute("class") == "completed"){
                     task.setAttribute("class","");
+                    countValue--;
                 }
                 else {
                     task.setAttribute("class","completed");
+                    countValue++;
                 }
+                count.innerHTML = countValue;
 
 
             });
