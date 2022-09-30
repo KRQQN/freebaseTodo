@@ -7,8 +7,6 @@ body {
     background-image: linear-gradient(120deg,#3a3a3a, #ffffff);
     background-repeat: no-repeat;
     height: 100vh;
-    
-       
 }
 
 
@@ -50,7 +48,7 @@ li{
     padding: 10px;
     border: 1px solid black;
 }
-#no-input{
+#no-input,#count {
 
     color: red;
     text-align: center;
@@ -60,5 +58,11 @@ li{
 .completed {
     text-decoration: line-through;
     color: green;
+}
+#deleteBtn {
+    font-size: 1.5rem;
+    text-align: right;
+    justify-content: right;
+    flex-grow: 1;
 }
 
