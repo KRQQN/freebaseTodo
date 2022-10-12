@@ -38,13 +38,15 @@ body {
   padding: 0.5rem;
 }
 .preSpan {
+  width: auto;
   background-color: none;
   padding-top: 5px;
   padding-bottom: 5px;
-  justify-content: center;
+  display:flex;
+  justify-content: space-between;
 }
 li {
-  text-align: center;
+  
   border-radius: 5px;
   margin-bottom: 5px;
   background-color: darkturquoise;
@@ -52,6 +54,7 @@ li {
   max-width: 400px;
   border: none;
   display: flex;
+  
 }
 #deleteBtn {
   font-size: 2rem;
