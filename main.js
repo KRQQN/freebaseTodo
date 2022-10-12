@@ -5,7 +5,7 @@ const errorMsg = document.querySelector("#no-input");
 const taskArray = [];
 const count = document.querySelector("#count");
 let countValue = 0;
-
+errorMsg.innerHTML = "";
 // adding eventlistener -> addTaskBtn.
 addTaskBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -23,9 +23,11 @@ addTaskBtn.addEventListener("click", function (e) {
     
     trashButton.innerHTML = "&#128465";
     trashButton.setAttribute("id", "deleteBtn");
+  
     //appendsession
     list.appendChild(task);
     taskLabel.innerText = text;
+    taskLabel.setAttribute("class", "preSpan" )
     task.appendChild(taskLabel);
     task.appendChild(trashButton);
 

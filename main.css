@@ -1,68 +1,64 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background-image: linear-gradient(120deg,#3a3a3a, #ffffff);
-    background-repeat: no-repeat;
-    height: 100vh;
+  padding: 0px;
+  margin: 0 auto;
 }
 
+body {
+  background-color: aqua;
+  text-align: center;
+  width: 50%;
+  
+}
 
 .header {
-    font-size: 4rem;
-    text-align: center;
+  font-size: 3rem;
 }
-.container, .header, .todo-box {
-    
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+.container,
+#txtFieldInput {
+  min-width: 200px;
+  max-width: 400px;
+  display: flex;
+  border: none;
+  flex-grow: 1;
+  outline: none;
 }
-form input, form button{
-    padding: 0.5rem;
-    font-size: 2rem;
-    border: none;
-    background: white;
-    outline: none;
-    
-}
-form button{
-    border: none;
-    background-color: #ffffff;
-    padding: 0.5;
-    outline: none;
-}
-form button:hover{
-    color: green;
-    outline: none;
-}
-li{
-    font-size: 25px;
-    width: 400px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid black;
-}
-#no-input,#count {
 
-    color: red;
-    text-align: center;
-    font-size: 1.5rem;
-
+#txtFieldInput {
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 10px;
 }
-.completed {
-    text-decoration: line-through;
-    color: green;
+#addTaskBtn {
+  color: darkolivegreen;
+  border: none;
+  font-size: 30px;
+  background-color: white;
+  padding: 0.5rem;
+}
+.preSpan {
+  background-color: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  justify-content: center;
+}
+li {
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: darkturquoise;
+  min-width: 200px;
+  max-width: 400px;
+  border: none;
+  display: flex;
 }
 #deleteBtn {
-    font-size: 1.5rem;
-    text-align: right;
-    justify-content: right;
-    flex-grow: 1;
+  font-size: 2rem;
+  border: none;
+  background-color: darkturquoise;
+  color: white;
 }
-
+#deleteBtn:hover {
+    color:red;
+}
