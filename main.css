@@ -22,7 +22,10 @@ body {
   border: none;
   flex-grow: 1;
   outline: none;
+  
 }
+
+
 
 .main {
   padding: 20px;
@@ -88,5 +91,10 @@ li[class="completed"] > #deleteBtn {
 .completed > span {
   text-decoration: line-through;
   background-color: green;
+}
+.msgs {
+  padding: 10px;
+  height: 40px;
+  border:5x solid red;
 }
 
