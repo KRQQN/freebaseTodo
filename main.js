@@ -9,15 +9,19 @@ const count = document.querySelector("#count");
 let countValue = 0;
 errorMsg.innerHTML = "";
 
-designBtn.addEventListener("click", function() {
-  if (cssLink.href == "main.css") {
-    cssLink.href = "newCss.css";
-  } 
-  if (cssLink.href == "newCss.css") {
-  cssLink.href = "main.css";
-  }
+designBtn.addEventListener("click", () => {
 
+  const currentHref = cssLink.getAttribute("href");
+  if (currentHref == "main.css") {
+    cssLink.setAttribute("href", "newCss.css");
+  }
+  if (currentHref == "newCss.css") {
+    cssLink.setAttribute("href", "main.css");
+  }
 });
+
+
+
 // adding eventlistener -> addTaskBtn.
 addTaskBtn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -32,14 +36,14 @@ addTaskBtn.addEventListener("click", function (e) {
     const task = document.createElement("li");
     const taskLabel = document.createElement("span");
     const trashButton = document.createElement("button");
-    
+
     trashButton.innerHTML = "&#128465";
     trashButton.setAttribute("id", "deleteBtn");
-  
+
     //appendsession
     list.appendChild(task);
     taskLabel.innerText = text;
-    taskLabel.setAttribute("class", "preSpan" )
+    taskLabel.setAttribute("class", "preSpan");
     task.appendChild(taskLabel);
     task.appendChild(trashButton);
 
@@ -55,7 +59,7 @@ addTaskBtn.addEventListener("click", function (e) {
       } else {
         task.remove();
       }
-      if (countValue == 0) count.innerHTML ="";
+      if (countValue == 0) count.innerHTML = "";
       if (countValue > 0) count.innerHTML = `Tasks done: ${countValue}`;
     });
 
@@ -70,10 +74,8 @@ addTaskBtn.addEventListener("click", function (e) {
         taskObj.isComplete = true;
         countValue++;
       }
-      if (countValue == 0) count.innerHTML ="";
+      if (countValue == 0) count.innerHTML = "";
       if (countValue > 0) count.innerHTML = `Tasks done: ${countValue}`;
-
-      
     });
   } else {
     errorMsg.innerHTML = "Du måste skriva in något i textfältet";
