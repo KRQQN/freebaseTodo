@@ -2,10 +2,22 @@ const inputTxt = document.querySelector("#txtFieldInput");
 const addTaskBtn = document.querySelector("#addTaskBtn");
 const list = document.querySelector(".todo-list");
 const errorMsg = document.querySelector("#no-input");
+const cssLink = document.querySelector("#cssLink");
+const designBtn = document.querySelector(".designBtn");
 const taskArray = [];
 const count = document.querySelector("#count");
 let countValue = 0;
 errorMsg.innerHTML = "";
+
+designBtn.addEventListener("click", function() {
+  if (cssLink.href == "main.css") {
+    cssLink.href = "newCss.css";
+  } 
+  if (cssLink.href == "newCss.css") {
+  cssLink.href = "main.css";
+  }
+
+});
 // adding eventlistener -> addTaskBtn.
 addTaskBtn.addEventListener("click", function (e) {
   e.preventDefault();
