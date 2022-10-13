@@ -7,12 +7,12 @@ body {
   background-color: aqua;
   text-align: center;
   width: 50%;
-  
 }
 
 .header {
   font-size: 3rem;
 }
+
 
 .container,
 #txtFieldInput {
@@ -24,6 +24,13 @@ body {
   outline: none;
 }
 
+.main {
+  padding: 20px;
+  background-color:lightseagreen ;
+  border-radius: 20px;
+  border: 5px inset black ;
+}
+
 #txtFieldInput {
   font-size: 1rem;
   font-weight: bold;
@@ -31,37 +38,55 @@ body {
   padding: 10px;
 }
 #addTaskBtn {
-  color: darkolivegreen;
+  color: black;
   border: none;
   font-size: 30px;
   background-color: white;
   padding: 0.5rem;
 }
+#addTaskBtn:hover {
+  color:green;
+}
 .preSpan {
-  width: auto;
-  background-color: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display:flex;
-  justify-content: space-between;
+  text-indent: 5px;
+
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 15px;
+  vertical-align: middle;
 }
 li {
-  
   border-radius: 5px;
   margin-bottom: 5px;
   background-color: darkturquoise;
   min-width: 200px;
   max-width: 400px;
-  border: none;
+  border: 3px solid gray;
+  border-style: inset;
   display: flex;
-  
+}
+li:hover,#deleteBtn{
+  background-color: gainsboro;
+}
+li[class="completed"],
+li[class="completed"] > #deleteBtn {
+  background-color: green;
 }
 #deleteBtn {
   font-size: 2rem;
   border: none;
   background-color: darkturquoise;
   color: white;
+  flex-shrink: 1;
+  margin-right: 10px;
 }
 #deleteBtn:hover {
-    color:red;
+  color: red;
+  background-color: gainsboro;
 }
+.completed > span {
+  text-decoration: line-through;
+  background-color: green;
+}
+

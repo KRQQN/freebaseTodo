@@ -29,7 +29,7 @@ addTaskBtn.addEventListener("click", function (e) {
     taskLabel.innerText = text;
     taskLabel.setAttribute("class", "preSpan" )
     task.appendChild(taskLabel);
-    taskLabel.appendChild(trashButton);
+    task.appendChild(trashButton);
 
     //object made and pushed into array
     const taskObj = { task: text, isComplete: false };
