@@ -28,7 +28,9 @@ addTaskBtn.addEventListener("click", function (e) {
   //getting text from <input> through inputTxt -> text
   const text = inputTxt.value;
   //if inputfield isnt empty
-  if (text != "") {
+  //and isnt longer than 25chars
+  
+  if (text != "" && text.length < 25) {
     //defaults errorMsg & inputTxt each click
     errorMsg.innerHTML = "";
     inputTxt.value = "";
@@ -79,5 +81,10 @@ addTaskBtn.addEventListener("click", function (e) {
     });
   } else {
     errorMsg.innerHTML = "Du måste skriva in något i textfältet";
+      if(text.length >= 25)
+        errorMsg.innerHTML = "För lång text.";
+
+
+
   }
 });

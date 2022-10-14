@@ -50,12 +50,16 @@ body {
 }
 #addTaskBtn:hover {
   color:green;
+  
+  
+}
+
+#addTaskIcon:hover {
   animation: spinnie 5s ;
-  /*avslutadehär*/
 }
 .preSpan {
   text-indent: 5px;
-
+  font-size: 1rem;
   display: flex;
   flex-grow: 1;
   flex-shrink: 1;
